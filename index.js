@@ -194,7 +194,7 @@ const createHTMLFile = (html) => {
     fs.writeFile("./dist/team-profile.html", html, err => {
         if (err) {
             console.log(err)
-        } else {console.log('Success!')}
+        } else {console.log('Success! File saved in the dist folder')}
     })
 }
 
