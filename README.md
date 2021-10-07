@@ -7,10 +7,10 @@
   ## Application Demo
 
   #### Screenshot
-  ![Screenshot of demo terminal](demo/demo-screenshot.png)
+  ![Screenshot of template example](src/template-screenshot.png)
 
   #### Link to demo video
-  https://youtu.be/BKqjLTdZafg 
+  https://youtu.be/hy5ylQXFHzI 
 
   #### Link to the Github Repo
   https://github.com/bckasper/team-profile-generator 
