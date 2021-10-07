@@ -32,12 +32,12 @@ const initialize = () => {
         {
             type: 'input',
             message: "What office is the Manager located in?",
-            name: 'office'
-        }
+            name: 'officeNumber'
+        },
     ])
     .then(responses => {
 
-        const manager = new Manager(responses.name, responses.id, responses.email, responses.office)
+        const manager = new Manager(responses.name, responses.id, responses.email, responses.officeNumber)
         team.push(manager)
 
         nextEmployee()
@@ -214,7 +214,7 @@ return `<div class="card p-2 my-3 border border-success" style="width: 20rem; mi
                   <ul class="list-group list-group-flush">
                       <li class="card-text list-group-item"><strong>ID:</strong> ${manager.id}</li>
                       <li class="card-text list-group-item"><strong>Email:</strong> <a href="mailto:${manager.email}"> ${manager.email}</a></li>
-                      <li class="card-text list-group-item"><strong>Office:</strong> ${manager.office}</li>
+                      <li class="card-text list-group-item"><strong>Office:</strong> ${manager.officeNumber}</li>
                   </ul>  
                 </div>
             </div>`

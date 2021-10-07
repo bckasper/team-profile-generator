@@ -15,8 +15,8 @@
   #### Link to the Github Repo
   https://github.com/bckasper/team-profile-generator 
 
-  ### Link to a sample HTML file
-  https://github.com/bckasper/team-profile-generator/blob/main/src/template.html
+  ### Link to a sample HTML file screenshot
+  https://github.com/bckasper/team-profile-generator/blob/main/src/Screen%20Shot%202021-10-06%20at%2010.53.04%20PM.png 
 
   ## Installation
   The user needs access to their terminal, the files in this directory, and have node.js installed on their machine. They will also need to install the inquirer and jest packages if they had not already done so.
