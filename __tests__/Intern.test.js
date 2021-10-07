@@ -14,6 +14,7 @@ describe('newIntern', () => {
         expect(newIntern.name).toEqual('Link')
         expect(newIntern.id).toEqual('49834')
         expect(newIntern.email).toEqual('savezelda@nintenda.com')
+        expect(newIntern.school).toEqual('Skyloft Knights Academy')
     })
 })
 

@@ -5,7 +5,7 @@ const Engineer = require('../lib/Engineer')
 // Engineer object needs a name, ID, email, and github parameter
 const newEngineer = new Engineer('Crash Bandicoot', '39203', 'ukauka@naughtydog.com', 'crashbandi')
 
-// Below is the test to create an object and test the methods of getName, getID, getEmail, and getRole
+// Below is the test to create an object and test the methods of getName, getID, getEmail, getRole, and getGithub
 
 // This test runs to see that the object creates an engineer based on the parameters
 describe('newEngineer', () => {
