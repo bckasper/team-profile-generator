@@ -189,7 +189,7 @@ const generateHTML = (team) => {
 createHTMLFile(fullPage)
 }
 
-
+// This function actually writes the file that is generated in the generateHTML function above
 const createHTMLFile = (html) => {
     fs.writeFile("./dist/team-profile.html", html, err => {
         if (err) {
@@ -198,7 +198,7 @@ const createHTMLFile = (html) => {
     })
 }
 
-
+// This function kicks off the process by asking the user for the manager's name
 initialize()
 
 
