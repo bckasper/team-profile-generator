@@ -106,7 +106,47 @@ const createEngineer = () => {
 
 }
 
+// Function that will generate a new Engineer
+const createIntern = () => {
 
+    return inquirer.prompt([
+
+        {
+            type: 'input',
+            message: "What is the name of the Intern?",
+            name: 'name',
+        },
+        {
+            type: 'input',
+            message: "What is the Intern's employee ID?",
+            name: 'id'
+        },
+        {
+            type: 'input',
+            message: "What is the Intern's email address?",
+            name: 'email'
+        },
+        {
+            type: 'input',
+            message: "What school does the Intern go to?",
+            name: 'school'
+        }
+
+    ])
+    .then(responses => {
+
+        const intern = new Intern(responses.name, responses.id, responses.email, responses.school)
+        team.push(intern)
+
+        nextEmployee()
+
+    })
+}
+
+// Function that will write the HTML file based on the user's inputs
+const generateHTML = (team) => {
+
+}
 
 
 initialize()
