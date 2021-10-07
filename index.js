@@ -63,7 +63,7 @@ const nextEmployee = () => {
         } else if(response.employee === 'Intern'){
             createIntern()
         } else {
-            generateHTML()
+            generateHTML(team)
         }
     })
 }
@@ -146,7 +146,102 @@ const createIntern = () => {
 // Function that will write the HTML file based on the user's inputs
 const generateHTML = (team) => {
 
+    const htmlBody = []
+
+    for(let i=0; i < team.length; i++){
+
+        if(team[i].getRole() === "Manager"){
+            let newManager = managerCard(team[i])
+            htmlBody.push(newManager)
+        } else if(team[i].getRole() === "Engineer"){
+            let newEngineer = engineerCard(team[i])
+            htmlBody.push(newEngineer)
+        } else if(team[i].getRole() === "Intern"){
+            let newIntern = internCard(team[i])
+            htmlBody.push(newIntern)
+        } 
+    }
+
+    const fullPage = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap: CSS Only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+        <title>Team Profile</title>
+    </head>
+    <body class="m-1 bg-light">
+        
+        <div class="jumbotron jumbotron-fluid bg-dark">
+            <h1 class="display-4 text-light p-3 text-center">My Team Profile</h1>
+        </div>
+    
+        <div id="container" class="container-fluid">
+            <div class="row justify-content-evenly align-items-center">
+            ${htmlBody.join('')} 
+    </div>
+    </div>
+</body>
+</html>`
+
+createHTMLFile(fullPage)
 }
 
 
+
+
+
 initialize()
+
+
+// Below are the three helper generator functions for "Cards" from the HTML template that so they can be more easily used in the generateHTML function above
+
+const managerCard = (manager) => {
+return `<div class="card p-2 my-3 border border-success" style="width: 20rem; min-height:300px">
+                <div class="card-body text-light" style="background-color: rgb(155, 80, 80); max-height: fit-content;">
+                    <h2 class="card-title">${manager.name}</h2>
+                    <h6 class="card-subtitle">${manager.getRole()}</h6>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                      <li class="card-text list-group-item"><strong>ID:</strong> ${manager.id}</li>
+                      <li class="card-text list-group-item"><strong>Email:</strong> <a href="mailto:${manager.email}"> ${manager.email}</a></li>
+                      <li class="card-text list-group-item"><strong>Office:</strong> ${manager.office}</li>
+                  </ul>  
+                </div>
+            </div>`
+}
+
+const engineerCard = (engineer) => {
+return `<div class="card p-2 my-3 border border-success" style="width: 20rem; min-height: 300px">
+                <div class="card-body text-light" style="background-color: rgb(45, 70, 133); max-height: fit-content;">
+                    <h2 class="card-title">${engineer.name}</h2>
+                    <h6 class="card-subtitle">${engineer.getRole()}</h6>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                      <li class="card-text list-group-item"><strong>ID:</strong> ${engineer.id}</li>
+                      <li class="card-text list-group-item"><strong>Email:</strong><a href="mailto:${engineer.email}"> ${engineer.email}</a></li>
+                      <li class="card-text list-group-item"><strong>Github:</strong> <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+                  </ul>  
+                </div>
+            </div>`
+}
+
+const internCard = (intern) => {
+return `<div class="card p-2 my-3 border border-success" style="width: 20rem; min-height: 300px">
+                <div class="card-body text-light" style="background-color: rgb(52, 101, 70); max-height: fit-content;">
+                    <h2 class="card-title">${intern.name}</h2>
+                    <h6 class="card-subtitle">${intern.getRole()}</h6>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                      <li class="card-text list-group-item"><strong>ID:</strong> ${intern.id}</li>
+                      <li class="card-text list-group-item"><strong>Email:</strong><a href="mailto:${intern.email}"> ${intern.email}</a></li>
+                      <li class="card-text list-group-item"><strong>School:</strong> ${intern.school}</li>
+                  </ul>  
+                </div>
+            </div>`
+}
