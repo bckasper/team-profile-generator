@@ -12,8 +12,11 @@
   #### Link to demo video
   https://youtu.be/BKqjLTdZafg 
 
-  #### Link to demo README
-  https://github.com/bckasper/README-generator/blob/main/demo/README-demo.md 
+  #### Link to the Github Repo
+  https://github.com/bckasper/team-profile-generator 
+
+  ### Link to a sample HTML file
+  https://github.com/bckasper/team-profile-generator/blob/main/src/template.html
 
   ## Installation
   The user needs access to their terminal, the files in this directory, and have node.js installed on their machine. They will also need to install the inquirer and jest packages if they had not already done so.
