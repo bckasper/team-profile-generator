@@ -4,8 +4,8 @@
   ## Description
   This is an application run out of the terminal that will generate an HTML page with built-in styling that displays a team profile based on the user's inputs of tem members. 
 
-  ## Application Demo
-
+  ## Application Screenshots, Links and Demo
+ 
   #### Screenshot
   ![Screenshot of template example](src/template-screenshot.png)
 
@@ -15,7 +15,7 @@
   #### Link to the Github Repo
   https://github.com/bckasper/team-profile-generator 
 
-  ### Link to a sample HTML file screenshot
+  #### Link to a sample HTML file screenshot
   https://github.com/bckasper/team-profile-generator/blob/main/src/Screen%20Shot%202021-10-06%20at%2010.53.04%20PM.png 
 
   ## Installation
