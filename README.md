@@ -10,7 +10,7 @@
   ![Screenshot of template example](src/template-screenshot.png)
 
   #### Link to demo video
-  https://youtu.be/hy5ylQXFHzI 
+  https://youtu.be/Gk-zDZM-wAE
 
   #### Link to the Github Repo
   https://github.com/bckasper/team-profile-generator 
